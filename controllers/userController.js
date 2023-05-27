@@ -102,7 +102,7 @@ module.exports = {
     const {name,email,picure}=ticket.payload();
     return res.status(200).json({msg:"Login in",data:{name,email}})
   },
-  getAlluser:()=>{
+  getAlluser:(req,res)=>{
     return res.status(200).json({
       msg:"success",
       data:[
