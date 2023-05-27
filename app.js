@@ -9,8 +9,8 @@ app.use(cookieParser());
 app.get('/',(req,res)=>{
   return res.status(200).json("Hello World");
 })
-// app.use("/api/v1", routes);  
-// require("./connection/db");
+app.use("/api/v1", routes);  
+require("./connection/db");
 app.listen(port || 4000, () => {
   console.log(`Server is running on port ${port}`);
 });
